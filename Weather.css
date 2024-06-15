@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(145deg, #2c3e50, #3498db);
+}
+
+.container {
+  position: relative;
+  width: 310px;
+  height: 500px;
+  border-radius: 15px;
+  padding: 18px;
+
+  background: linear-gradient(145deg, #2c3e50, #3498db);
+  /* background: rgba(255, 255, 255, 0.1); */
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.weather-form {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.city-name {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  outline: none;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  padding: 0 42px;
+}
+
+.city-name::placeholder {
+  color: #fff;
+}
+
+.weather-form button {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+}
+
+.city-name-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+.container .weather-icon {
+  width: 70px;
+  height: 70px;
+  display: none;
+  margin: 0 auto;
+}
+
+.container .weather-icon.loaded {
+  display: flex;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 25px;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.weather-info-main,
+.weather-info-sec,
+.weather-info-extra,
+.weather-info-daylight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 10px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.weather-more-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-info-sec,
+.weather-info-extra {
+  font-size: 12px;
+}
+
+.weather-info-sec,
+.weather-info-daylight {
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+  .container {
+    width: 100%;
+    height: 90px;
+  }
+  .container.info-loaded {
+    height: auto;
+  }
+
+  .weather-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 250px;
+  }
+  .city-name-info {
+    font-size: 40px;
+  }
+
+  .weather-body {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+  }
+  .weather-body,
+  .weather-more-info {
+    gap: 20px;
+  }
+
+  .weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .weather-info {
+    font-size: 20px;
+  }
+
+  .weather-info-main,
+  .weather-info-sec,
+  .weather-info-extra,
+  .weather-info-daylight {
+    font-size: 14px;
+  }
+
+  .weather-form {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 45px;
+    width: 280px;
+  }
+}
+
+/* For a non-technical audience:
+The first line imports a specific font from Google Fonts to be used throughout the application.
+
+The * selector applies certain styles to all elements on the page. It sets the font, ensures that the padding and margin (space around elements) are set to zero, and that the box-sizing is set to border-box, which means padding and border are included in an element's total width and height.
+
+The body selector styles the main body of the webpage. It's set to display its contents in a centered flex layout (a layout that's easy to adjust to different screen sizes), and it has a gradient background.
+
+The .container selector styles a container that holds the main content of the webpage. It's given a specific width, height, and background, among other properties.
+
+The .weather-form selector styles a form where users can enter a city name to get the weather information.
+
+The .city-name selector styles the input field where users type the city name.
+
+The .city-name-info selector styles the area where the city name is displayed after the weather information is loaded.
+
+The .weather-icon selector styles the weather icon that's displayed when the weather information is loaded.
+
+The .weather-info and similar selectors style the different parts of the weather information that's displayed.
+
+The @media screen and (min-width: 768px) part is a media query that applies certain styles only when the screen width is 768 pixels or more. This is used to make the webpage responsive, meaning its layout adjusts to look good on different screen sizes. For example, on larger screens, the .container's height is set to auto, which means it will adjust based on its content. */

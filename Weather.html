@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Weather.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="weather-form">
+        <input
+          type="text"
+          class="city-name"
+          placeholder="Enter city name"
+          spellcheck="false"
+        />
+        <button
+          type="submit"
+          class="bx bx-search-alt-2"
+          aria-label="Search"
+        ></button>
+      </form>
+
+      <div class="weather">
+        <div class="weather-hero">
+          <div class="city-name-info"></div>
+          <img src="" alt="weather icon" class="weather-icon" />
+          <div class="weather-info"></div>
+        </div>
+
+        <div class="weather-body">
+          <div class="weather-info-main"></div>
+          <div class="weather-more-info">
+            <div class="weather-info-sec"></div>
+            <div class="weather-info-extra"></div>
+          </div>
+          <div class="weather-info-daylight"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./Weather.js"></script>
+  </body>
+</html>
+
+
+<!-- 
+For a non-technical audience:
+
+The body of the webpage contains the main content. 
+
+It includes:
+A div container that holds all the other elements. This is often used for styling purposes.
+A form where the user can enter the name of a city. It contains an input field for text entry and a button for submitting the form.
+A div for displaying the weather information. This contains several other div elements for different pieces of information, such as the city name, a weather icon, and various weather details. The actual weather data is not included in the HTML code; it will be fetched and inserted by the JavaScript code when the user submits a city name.
+At the end, the script tag links to the JavaScript file Weather.js, which contains the code that makes the weather application interactive. This includes fetching the weather data from an external service and updating the webpage with this data. -->
