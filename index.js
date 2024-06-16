@@ -1,4 +1,3 @@
-const APIkey="c958541f838da433456415b7cbdd06f0"
 
 function fetchWeather() {
   let cityName = document.querySelector(".city-name").value;
